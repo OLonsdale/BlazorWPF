@@ -1,0 +1,13 @@
+﻿@page "/"
+@using BlazorWPF.Client.Data
+@inject DataService ds
+
+Working!
+
+<br/>
+
+<MudIcon Icon="@Icons.Material.Filled.Check" />
+
+<br/>
+
+@ds.GetMessage()
