@@ -1,13 +1,37 @@
 ﻿@page "/"
 @using BlazorWPF.Client.Data
 @inject DataService ds
+@inject CardReaderService card
 
-Working!
+<h3>Smart Card Demo</h3>
 
-<br/>
+<MudButton Variant="Variant.Filled" OnClick="GetCardReaderStatus">Get Card Reader Status</MudButton><br/>
 
-<MudIcon Icon="@Icons.Material.Filled.Check" />
+<p>@cardReaderStatus</p>
 
-<br/>
+@code {
+    string? cardReaderStatus = "Waiting...";
 
-@ds.GetMessage()
+    protected override void OnInitialized()
+    {
+        card.OnCardInserted = (readerName) =>
+        {
+            var info = card.GetCardPanInfo();
+            cardReaderStatus = $"[{readerName}] {info}";
+            InvokeAsync(StateHasChanged);
+        };
+
+        card.OnCardRemoved = (readerName) =>
+        {
+            cardReaderStatus = $"Card removed from: {readerName}";
+            InvokeAsync(StateHasChanged);
+        };
+
+        card.StartMonitoring();
+    }
+
+    async Task GetCardReaderStatus()
+    {
+        cardReaderStatus = card.GetCardPanInfo();
+    }
+}

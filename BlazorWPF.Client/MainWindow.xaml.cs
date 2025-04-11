@@ -30,6 +30,7 @@ namespace BlazorWPF.Client
             serviceCollection.AddMudServices();
             serviceCollection.AddBlazorWebViewDeveloperTools(); //open with ctrl+shift+i
             serviceCollection.AddSingleton<DataService>();
+            serviceCollection.AddSingleton<CardReaderService>();
             Resources.Add("services", serviceCollection.BuildServiceProvider());
             InitializeComponent();
             

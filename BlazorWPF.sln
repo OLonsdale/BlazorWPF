@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillingKiosk.Client", "FillingKiosk.Client\FillingKiosk.Client.csproj", "{9158C9E5-193B-4845-B62F-634E3894F899}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWPF.Client", "BlazorWPF.Client\BlazorWPF.Client.csproj", "{9158C9E5-193B-4845-B62F-634E3894F899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

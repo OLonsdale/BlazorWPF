@@ -1,7 +1,5 @@
-﻿This project is based on the instructions of:
+﻿# BlazorWPF with MudBlazor
 
-https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/?view=aspnetcore-8.0
+Very minimal dotnet 9 WPF App hosting a MudBlazor site
 
-https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0
-
-And then extended with the contents of the current mauiblazor project template
+Has example hook for using a card reader, probably very hardware specific, and doesn't even work properly on my laptop, but it's fine as a POC
